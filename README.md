@@ -1,6 +1,6 @@
 Version = 1.1.0
 
-BASE PARA EL BUSCAMINAS: (Nombre alumno)
+BASE PARA EL BUSCAMINAS: (Jose Luis Luengo Ramos)
 =========================
 
 En este programa se encuentra la base para el Buscaminas de Desarrollo de intefaces (DAM2).
