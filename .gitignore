@@ -2,3 +2,5 @@
 *.iml
 .classpath
 .project
+.setting
+bin
