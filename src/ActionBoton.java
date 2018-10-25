@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,10 +13,18 @@ import java.awt.event.ActionListener;
  */
 public class ActionBoton implements ActionListener{
 
-	
+	private VentanaPrincipal ventana;
+	private int i;
+	private int j;
 
-	public ActionBoton() {
-		//TODO
+	public ActionBoton(VentanaPrincipal ventana) {
+		this.ventana = ventana;
+	}
+
+	public ActionBoton(VentanaPrincipal ventana, int i, int j){
+		this.ventana=ventana;
+		this.i=i;
+		this.j=j;
 	}
 	
 	/**
@@ -22,7 +32,28 @@ public class ActionBoton implements ActionListener{
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		//TODO
+
+		JButton jbAux = (JButton) e.getSource();
+
+		if(jbAux.getText().equals("Go!")){
+			ventana.getJuego().inicializarPartida();
+			ventana.ventana.setContentPane(new JPanel(new BorderLayout()));
+			ventana.inicializar();
+			ventana.refrescarPantalla();
+		} else {
+			if(ventana.getJuego().abrirCasilla(this.i,this.j)){
+				ventana.mostrarNumMinasAlrededor(this.i,this.j);
+				ventana.actualizarPuntuacion();
+				ventana.refrescarPantalla();
+				if(ventana.getJuego().getPuntuacion()==80)
+				ventana.mostrarFinJuego(ventana.getJuego().esFinJuego());
+			} else {
+				ventana.mostrarFinJuego(ventana.getJuego().esFinJuego());
+				ventana.refrescarPantalla();
+			}
+
+		}
+
 	}
 
 }

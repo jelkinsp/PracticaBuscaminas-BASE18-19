@@ -117,15 +117,7 @@ public class ControlJuego {
      * @return Devuelve verdadero si se han abierto todas las celdas que no son minas.
      **/
     public boolean esFinJuego() {
-        int cont =0;
-        for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < tablero[i].length; j++) {
-                if (tablero[i][j] != MINA) {
-                    cont++;
-                }
-            }
-        }
-        if(cont==80){
+        if(puntuacion==LADO_TABLERO*LADO_TABLERO-MINAS_INICIALES){
             return true;
         }
         return false;
