@@ -82,12 +82,10 @@ public class ControlJuego {
         int minas = 0;
         for (int k = i - 1; k < i + 2; k++) {
             for (int l = j - 1; l < j + 2; l++) {
-                try {
+                if ((k < LADO_TABLERO) && (k >= 0) && (l < LADO_TABLERO) && (l >= 0)) {
                     if (tablero[k][l] == MINA) {
                         minas++;
                     }
-                } catch (Exception e) {
-                    //Y que no pare la fiesta.
                 }
             }
         }
@@ -117,7 +115,7 @@ public class ControlJuego {
      * @return Devuelve verdadero si se han abierto todas las celdas que no son minas.
      **/
     public boolean esFinJuego() {
-        if(puntuacion==LADO_TABLERO*LADO_TABLERO-MINAS_INICIALES){
+        if (puntuacion == LADO_TABLERO * LADO_TABLERO - MINAS_INICIALES) {
             return true;
         }
         return false;
@@ -147,19 +145,7 @@ public class ControlJuego {
      * @pre : El tablero tiene que estar ya inicializado, por lo tanto no hace falta calcularlo, símplemente consultarlo
      */
     public int getMinasAlrededor(int i, int j) {
-        int minas = 0;
-        for (int k = i - 1; k < i + 2; k++) {
-            for (int l = j - 1; l < j + 2; l++) {
-                try {
-                    if (tablero[k][l] == MINA) {
-                        minas++;
-                    }
-                } catch (Exception e) {
-                    //Y que no pare la fiesta.
-                }
-            }
-        }
-        return minas;
+        return tablero[i][j];
     }
 
     /**
