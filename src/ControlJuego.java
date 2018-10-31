@@ -8,7 +8,9 @@ import java.util.Random;
  * Si no hay una mina, se guarda cuántas minas hay alrededor.
  * Almacena la puntuación de la partida
  *
- * @author Jose Luis Luengo Ramos
+ * @author: Jose Luis Luengo Ramos
+ * @version: 1.2.2
+ * @since: 1.1.0
  */
 public class ControlJuego {
 
