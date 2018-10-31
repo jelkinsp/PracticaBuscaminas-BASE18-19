@@ -19,7 +19,7 @@ import javax.swing.SwingConstants;
  * se debe usar el metodo {@code{@link #inicializar()}} para inicializar todos los <i>components</i> y los <i>listeners</i>.
  *
  * @author: Jose Luis Luengo Ramos
- * @version: 1.1.0
+ * @version: 1.2.2
  * @since: 1.0.0
  * @see: {@code{@link ActionBoton}}
  *
