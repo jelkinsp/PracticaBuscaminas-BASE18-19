@@ -13,7 +13,17 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-
+/**
+ * Crea la ventana principal con el juego del buscaminas.
+ * Inserta todos los paneles y botones en la ventana.
+ * se debe usar el metodo {@code{@link #inicializar()}} para inicializar todos los <i>components</i> y los <i>listeners</i>.
+ *
+ * @author: Jose Luis Luengo Ramos
+ * @version: 1.1.0
+ * @since: 1.0.0
+ * @see: {@code{@link ActionBoton}}
+ *
+ */
 public class VentanaPrincipal {
 
 	//La ventana principal, en este caso, guarda todos los componentes:
@@ -37,17 +47,22 @@ public class VentanaPrincipal {
 	
 	//LA VENTANA GUARDA UN CONTROL DE JUEGO:
 	ControlJuego juego;
-	
-	
-	//Constructor, marca el tamaño y el cierre del frame
+
+	/**
+	 * Constructor, marca el tamaño y el cierre del frame.
+	 *
+	 */
 	public VentanaPrincipal() {
 		ventana = new JFrame();
 		ventana.setBounds(100, 100, 700, 500);
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		juego = new ControlJuego();
 	}
-	
-	//Inicializa todos los componentes del frame
+
+	/**
+	 * Inicializa todos los componentes del frame.
+	 *
+	 */
 	public void inicializarComponentes(){
 		
 		//Definimos el layout:
