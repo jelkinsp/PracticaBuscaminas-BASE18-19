@@ -16,12 +16,12 @@ import javax.swing.SwingConstants;
 /**
  * Crea la ventana principal con el juego del buscaminas.
  * Inserta todos los paneles y botones en la ventana.
- * se debe usar el metodo {@code{@link #inicializar()}} para inicializar todos los <i>components</i> y los <i>listeners</i>.
+ * se debe usar el metodo {@code inicializar()} para inicializar todos los <i>components</i> y los <i>listeners</i>.
  *
- * @author: Jose Luis Luengo Ramos
- * @version: 1.2.2
- * @since: 1.0.0
- * @see: {@code{@link ActionBoton}}
+ * @author  Jose Luis Luengo Ramos
+ * @version  1.2.5
+ * @since  1.0.0
+ * @see ControlJuego
  *
  */
 public class VentanaPrincipal {
@@ -190,7 +190,7 @@ public class VentanaPrincipal {
 	/**
 	 * Muestra una ventana que indica el fin del juego
 	 * @param porExplosion : Un booleano que indica si es final del juego porque ha explotado una mina (true) o bien porque hemos desactivado todas (false) 
-	 * @post : Todos los botones se desactivan excepto el de volver a iniciar el juego.
+	 *  Todos los botones se desactivan excepto el de volver a iniciar el juego.
 	 */
 	public void mostrarFinJuego(boolean porExplosion) {
 
