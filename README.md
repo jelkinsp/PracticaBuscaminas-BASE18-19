@@ -1,4 +1,4 @@
-Version = 1.2.0
+Version = 1.2.4
 
 BASE PARA EL BUSCAMINAS: (Jose Luis Luengo Ramos)
 =========================
